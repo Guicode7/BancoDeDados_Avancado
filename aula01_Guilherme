@@ -1,14 +1,17 @@
 QUESTÃO 1 - SELECT nome, salario 
 FROM funcionarios 
 WHERE salario > 3000;
+
 QUESTÃO 2 - SELECT nome 
 FROM funcionarios 
 ORDER BY nome;
+
 QUESTÃO 3 - SELECT 
   COUNT(*) AS total_de_funcionarios, 
   AVG(salario) AS media_salarial, 
   SUM(salario) AS total_salarios
 FROM funcionarios;
+
 QUESTÃO 4 - SELECT 
   departamento, 
   AVG(salario) AS media_salarial, 
@@ -16,23 +19,29 @@ QUESTÃO 4 - SELECT
 FROM funcionarios
 GROUP BY departamento
 HAVING COUNT(*) > 3;
+
 QUESTÃO 5 -SELECT nome
 FROM funcionarios e
 WHERE e.salario > (
     SELECT AVG(salario) 
     FROM funcionarios
 );
+
 QUESTÃO 6 -SELECT e.nome AS funcionario, d.nome AS departamento
 FROM Employees e
 INNER JOIN Departaments d ON e.departament_id = d.departamento_id;
+
 QUESTÃO 7 - SELECT e.nome AS funcionario, d.nome AS departamento
 FROM Employees e
 LEFT JOIN Departaments d ON e.departament_id = d.departamento_id;
+
 QUESTÃO 8 - SELECT *
 FROM orders
 WHERE data_pedidos BETWEEN '2025-01-01' AND '2025-01-31';
+
 QUESTÃO 9 - SELECT nome AS Nomes, salario AS Salarios
 FROM funcionarios;
+
 QUESTÃO 10 -SELECT f.nome, f.salario, f.departamento_id
 FROM funcionarios f
 WHERE f.salario > (
